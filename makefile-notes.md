@@ -4,6 +4,7 @@ But if nothing has changed: Don't rebuild the executable, just keep using the ex
 
 ### Why's this important?
 **Efficiency:** Saves time by not rebuilding everything unnecessarily.
+
 **Correctness:** Ensures your executable is only rebuilt when needed — keeping your build process fast and reliable.
 
 ### Example to illustrate
