@@ -12,12 +12,12 @@ logic or lack of proper synchronization, attempts to acquire both forks they nee
 without considering the availability of those forks for other philosophers. 
 This "greed" can lead to:
 
-●**Deadlock** :
+● **Deadlock** :
 If all philosophers simultaneously pick up one fork (e.g., their left fork) and then wait indefinitely
 for their right fork, no one can eat, and the simulation stalls. 
 This is a common outcome of a "greedy" or unsynchronized approach.
 
-●**Starvation** :
+● **Starvation** :
 While not necessarily a full deadlock, a "greedy" philosopher might repeatedly acquire forks 
 and eat, preventing other philosophers from ever getting enough resources to eat, leading to 
 their starvation and the simulation's end.
@@ -32,18 +32,19 @@ This is typically achieved through synchronization mechanisms like **mutexes**, 
 In the context of the 42 Philosophers project, **a race condition occurs when multiple threads (philosophers) attempt to access and modify shared resources (forks or status variables) concurrently without proper synchronization, leading to unpredictable and potentially incorrect program behavior**.
 
 Here's a breakdown of how race conditions manifest in this project:
-✘**Fork Acquisition**:
+
+✘ **Fork Acquisition**:
 
 If two adjacent philosophers try to pick up the same shared fork at the exact same time, a race condition can occur.
 Without synchronization mechanisms like mutexes, both philosophers might attempt to acquire the fork simultaneously, leading to a situation where only one successfully acquires it, while the other might incorrectly believe they also have it, or the state of the fork becomes inconsistent.
 
-✘**Status Updates**:
+✘ **Status Updates**:
 
 Philosophers' states (eating, thinking, sleeping, or even "last meal eaten" timestamps) are often shared variables that need to be updated.
 If multiple threads try to update these variables concurrently without protection, the final value might not be what's expected due to interleaved operations.
 For example, if two philosophers try to update a shared "meals eaten" counter, the final count might be lower than the actual number of meals consumed if updates are not atomic.
 
-✘**Starvation and Death Conditions**:
+✘ **Starvation and Death Conditions**:
 
 The project requires monitoring philosophers' hunger levels and detecting starvation. If the logic for checking and declaring a philosopher's death (based on time since last meal) is not properly synchronized, a race condition could lead to a philosopher being declared dead prematurely or not being declared dead when they should be, if multiple threads are checking and updating related timestamps.
 Consequences of Race Conditions:
