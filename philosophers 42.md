@@ -17,8 +17,8 @@ This "greed" can lead to:
 If all philosophers simultaneously pick up one fork (e.g., their left fork) and then wait indefinitely
 for their right fork, no one can eat, and the simulation stalls. 
 This is a common outcome of a "greedy" or unsynchronized approach.
-![deadlockedphilos](https://github.com/user-attachments/assets/357dc2d0-ae67-4900-b29c-00458cdab6da)
 
+![deadlockedphilos](https://github.com/user-attachments/assets/9ce385f8-9803-4504-87bc-a93d43c4f3d3)
 
 ● **Starvation** :
 While not necessarily a full deadlock, a "greedy" philosopher might repeatedly acquire forks 
