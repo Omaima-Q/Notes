@@ -11,12 +11,13 @@ A **"greedy philosopher"** would be a philosopher in the simulation who, due to 
 logic or lack of proper synchronization, attempts to acquire both forks they need to eat 
 without considering the availability of those forks for other philosophers. 
 This "greed" can lead to:
-**Deadlock** :
+
+●**Deadlock** :
 If all philosophers simultaneously pick up one fork (e.g., their left fork) and then wait indefinitely
 for their right fork, no one can eat, and the simulation stalls. 
 This is a common outcome of a "greedy" or unsynchronized approach.
 
-**Starvation** :
+●**Starvation** :
 While not necessarily a full deadlock, a "greedy" philosopher might repeatedly acquire forks 
 and eat, preventing other philosophers from ever getting enough resources to eat, leading to 
 their starvation and the simulation's end.
