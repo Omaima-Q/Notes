@@ -49,19 +49,19 @@ For example, if two philosophers try to update a shared "meals eaten" counter, t
 The project requires monitoring philosophers' hunger levels and detecting starvation. If the logic for checking and declaring a philosopher's death (based on time since last meal) is not properly synchronized, a race condition could lead to a philosopher being declared dead prematurely or not being declared dead when they should be, if multiple threads are checking and updating related timestamps.
 Consequences of Race Conditions:
 
-✘**Incorrect Behavior**:
+✘ **Incorrect Behavior**:
 
 The most direct consequence is that the simulation might not behave as intended. Philosophers might eat without truly possessing two forks, or the simulation might end prematurely or continue indefinitely due to inaccurate state tracking.
 
-✘**Deadlock**:
+✘ **Deadlock**:
 
 While not a race condition itself, race conditions can contribute to deadlocks by creating inconsistent states that prevent philosophers from acquiring necessary resources.
 
-✘**Unpredictable Outcomes**:
+✘ **Unpredictable Outcomes**:
 
 Race conditions can be difficult to debug because they are often non-deterministic, meaning they might not occur every time the program runs, or they might only appear under specific timing conditions.
 
-✘**Mitigation**:
+✘ **Mitigation**:
 
 To prevent race conditions in the Philosophers project, synchronization primitives such as mutexes are essential. 
 Mutexes ensure that only one thread can access a shared resource at a time, preventing concurrent modifications and ensuring data integrity. For example, a mutex can be associated with each fork, ensuring that only one philosopher can pick up a specific fork at any given moment.
