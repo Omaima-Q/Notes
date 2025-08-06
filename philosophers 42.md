@@ -1,4 +1,4 @@
-# Greedy Philosopher
+## Greedy Philosopher
 The term "greedy philosopher" in the context of the 42 project "Philosophers" refers 
 to a scenario or a potential issue within the simulation of the Dining Philosophers Problem.
 The Dining Philosophers Problem is a classic computer science problem used to illustrate 
@@ -19,7 +19,7 @@ The project's goal is to implement a solution that prevents such "greedy" behavi
 all philosophers can eat without dying of starvation or causing a deadlock. This is typically 
 achieved through synchronization mechanisms like mutexes, semaphores, or other resource management strategies.
 
-# Race Condition 
+## Race Condition 
 In the context of the 42 Philosophers project, a race condition occurs when multiple threads (philosophers) attempt to access and modify shared resources (forks or status variables) concurrently without proper synchronization, leading to unpredictable and potentially incorrect program behavior.
 Here's a breakdown of how race conditions manifest in this project:
 Fork Acquisition:
