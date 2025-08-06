@@ -5,7 +5,8 @@ to a scenario or a potential issue within the simulation of the Dining Philosoph
 The Dining Philosophers Problem is a classic computer science problem used to illustrate 
 synchronization issues in concurrent programming, specifically dealing with resource 
 allocation and avoiding deadlocks and starvation.
-A "greedy philosopher" would be a philosopher in the simulation who, due to the implemented 
+
+A **"greedy philosopher"** would be a philosopher in the simulation who, due to the implemented 
 logic or lack of proper synchronization, attempts to acquire both forks they need to eat 
 without considering the availability of those forks for other philosophers. This "greed" can lead to:
 Deadlock:
